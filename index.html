@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Daisy UI And Tailwind CSS Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Work Sans Font From Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- customize color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-color': '#E527B2',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        .work-sans-font {
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .input-border {
+            border: 2px solid rgba(17, 17, 17, 0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8F8F8] work-sans-font">
+    <!-- Header Section Starts Here -->
+    <header class="bg-[#F9F6E2]">
+        <div class="flex items-center justify-between flex-col-reverse md:flex-row lg:flex-row mx-auto w-3/4 ">
+            <div class=" flex-1 text-center text-[#111] space-y py-5">
+                <h4 class="mb-11 text-3xl font-medium uppercase">---SALE FEVER---</h4>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold">
+                    Purchase TK 200 or <br>
+                    above & get <span class="text-primary-color">20% off</span>
+                </h2>
+
+                <p class="mt-5 lg:mt-20 text-lg lg:text-2xl font-semibold ">
+                    Use Promo Code
+                    <button id="use-coupon-btn"
+                        class="lg:py-4 px-3 lg:px-6 ml-4 bg-primary-color border-0 hover:bg-pink-500 text-white rounded-lg">
+                        SELL200
+                    </button>
+                </p>
+            </div>
+            <img class="flex-1 md:w-[200px]" src="./resource/images/Summer1.png" alt="">
+        </div>
+    </header>
+
+    <!-- Header Section Ends Here -->
+
+    <!-- Main Section Starts Here -->
+    <main class="">
+        <!-- shopping Container -->
+        <div class="w-3/4 mx-auto flex gap-6 flex-col md:flex-row lg:flex-row">
+            <!-- Card Container Section -->
+            <div class="flex-1">
+                <!-- Kitchenware Section -->
+                <div class="mt-12">
+                    <h2 class="text-4xl font-semibold mb-8">Kitchenware</h2>
+                    <div class="grid gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
+                        <!-- First Card -->
+                        <div onclick="cardHandler(this)" class="card bg-base-100 shadow-xl bg-white p-5 cursor-pointer">
+                            <figure class="bg-gray-400 rounded-lg p-4"><img src="./resource/images/prod1.png"
+                                    alt="Kitchen Accessories" /></figure>
+                            <div class="card-body items-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-1" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-1" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-1" class="mask bg-[#FFC107] mask-star" checked />
+                                    <input type="radio" name="rating-1" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-1" class="mask bg-[#FFC107] mask-star" />
+                                </div>
+                                <h2 class="card-title">K. Accessories</h2>
+                                <p><span>39.00</span> TK</p>
+                            </div>
+                        </div>
+
+                        <!-- Second Card -->
+                        <div onclick="cardHandler(this)" class="card bg-base-100 shadow-xl bg-white p-5 cursor-pointer">
+                            <figure class="bg-gray-400 rounded-lg p-4"><img src="./resource/images/prod2.png"
+                                    alt="Kitchen Accessories" /></figure>
+                            <div class="card-body items-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-2" class="mask bg-[#FFC107] mask-star" checked/>
+                                    <input type="radio" name="rating-2" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-2" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-2" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-2" class="mask bg-[#FFC107] mask-star" />
+                                </div>
+                                <h2 class="card-title">K. Accessories</h2>
+                                <p><span>25.00</span> TK</p>
+                            </div>
+                        </div>
+
+                        <!-- Third Card -->
+                        <div onclick="cardHandler(this)" class="card bg-base-100 shadow-xl bg-white p-5 cursor-pointer">
+                            <figure class="bg-gray-400 rounded-lg p-4"><img src="./resource/images/prod3.png"
+                                    alt="Kitchen Accessories" /></figure>
+                            <div class="card-body items-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-3" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-3" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-3" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-3" class="mask bg-[#FFC107] mask-star" checked />
+                                    <input type="radio" name="rating-3" class="mask bg-[#FFC107] mask-star" />
+                                </div>
+                                <h2 class="card-title">Home Cooker</h2>
+                                <p><span>49.00</span> TK</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Sportswear card Section -->
+                <div class="mt-12 mb-12">
+                    <h2 class="text-4xl font-semibold mb-8">Sportswear</h2>
+                    <div class="grid gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
+                        <!-- First Card -->
+                        <div onclick="cardHandler(this)" class="card bg-base-100 shadow-xl bg-white p-5">
+                            <figure class="bg-gray-400 rounded-lg p-4"><img src="./resource/images/prod4.png"
+                                    alt="Kitchen Accessories" /></figure>
+                            <div class="card-body items-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-4" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-4" class="mask bg-[#FFC107] mask-star" checked />
+                                    <input type="radio" name="rating-4" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-4" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-4" class="mask bg-[#FFC107] mask-star" />
+                                </div>
+                                <h2 class="card-title">Sports Back Cap</h2>
+                                <p><span>49.00</span> TK</p>
+                            </div>
+                        </div>
+
+                        <!-- Second Card -->
+                        <div onclick="cardHandler(this)" class="card bg-base-100 shadow-xl bg-white p-5">
+                            <figure class="bg-gray-400 rounded-lg p-4"><img src="./resource/images/prod5.png"
+                                    alt="Kitchen Accessories" /></figure>
+                            <div class="card-body items-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-5" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-5" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-5" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-5" class="mask bg-[#FFC107] mask-star" checked />
+                                    <input type="radio" name="rating-5" class="mask bg-[#FFC107] mask-star" />
+                                </div>
+                                <h2 class="card-title">Full Jersey Set</h2>
+                                <p><span>69.00</span> TK</p>
+                            </div>
+                        </div>
+
+                        <!-- Third Card -->
+                        <div onclick="cardHandler(this)" class="card bg-base-100 shadow-xl bg-white p-5">
+                            <figure class="bg-gray-400 rounded-lg p-4"><img src="./resource/images/prod6.png"
+                                    alt="Kitchen Accessories" /></figure>
+                            <div class="card-body items-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-6" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-6" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-6" class="mask bg-[#FFC107] mask-star" checked />
+                                    <input type="radio" name="rating-6" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-6" class="mask bg-[#FFC107] mask-star" />
+                                </div>
+                                <h2 class="card-title">Sports cates</h2>
+                                <p><span>159.00</span> TK</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Furniture card Section -->
+                <div class="">
+                    <h2 class="text-4xl font-semibold mb-8">Furniture</h2>
+                    <div class="grid gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
+                        <!-- First Card -->
+                        <div onclick="cardHandler(this)" class="card bg-base-100 shadow-xl bg-white p-5">
+                            <figure class="bg-gray-400 rounded-lg p-4"><img src="./resource/images/prod7.png"
+                                    alt="Furniture Accessories" /></figure>
+                            <div class="card-body items-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-7" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-7" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-7" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-7" class="mask bg-[#FFC107] mask-star" checked />
+                                    <input type="radio" name="rating-7" class="mask bg-[#FFC107] mask-star" />
+                                </div>
+                                <h2 class="card-title">Single Relax Chair</h2>
+                                <p><span>185.00</span> TK</p>
+                            </div>
+                        </div>
+
+                        <!-- Second Card -->
+                        <div onclick="cardHandler(this)" class="card bg-base-100 shadow-xl bg-white p-5">
+                            <figure class="bg-gray-400 rounded-lg p-4"><img src="./resource/images/prod8.png"
+                                    alt="Kitchen Accessories" /></figure>
+                            <div class="card-body items-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-8" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-8" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-8" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-8" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-8" class="mask bg-[#FFC107] mask-star" checked />
+                                </div>
+                                <h2 class="card-title">Children play</h2>
+                                <p><span>299.00</span> TK</p>
+                            </div>
+                        </div>
+
+                        <!-- Third Card -->
+                        <div onclick="cardHandler(this)" class="card bg-base-100 shadow-xl bg-white p-5">
+                            <figure class="bg-gray-400 rounded-lg p-4"><img src="./resource/images/prod9.png"
+                                    alt="Kitchen Accessories" /></figure>
+                            <div class="card-body items-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-9" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-9" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-9" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-9" class="mask bg-[#FFC107] mask-star" />
+                                    <input type="radio" name="rating-9" class="mask bg-[#FFC107] mask-star" checked />
+                                </div>
+                                <h2 class="card-title">Flexible Sofa</h2>
+                                <p><span>399.00</span> TK</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Craft Section -->
+            <div class="mt-[7.5rem]">
+                <div class="p-6 flex-1 rounded-lg bg-white shadow-xl">
+                    <h2 class="text-2xl font-medium text-[#111] mb-4">Have coupon?</h2>
+                    <div class="join flex-col md:flex-col lg:flex-row space-y-2 md:space-y-0 lg:space-y-0">
+                        <input id="cuopon-code-field"
+                            class="input input-bordered rounded-lg md:rounded-lg lg:rounded-e-none lg:join-item font-semibold w-full md:w-full lg:w-[200px]"
+                            placeholder="Coupon code" />
+                        <button id="coupon-apply-btn"
+                            class="btn md:join-item lg:join-item md:rounded-s-none lg:rounded-s-none rounded-lg text-white bg-primary-color hover:bg-pink-700"
+                            disabled>
+                            Apply
+                        </button>
+                    </div>
+                </div>
+
+                <div class="space-y-6 flex-1 p-6 rounded-lg bg-white shadow-xl mt-6">
+                    <div class="text-2xl font-medium text-black list-decimal" id="select-items">
+
+                    </div>
+                    <hr class="bg-black">
+                    <div class="text-2xl font-medium text-black space-y-4">
+                        <p>Total Price : <span id="total-price-field" class="text-gray-500">00.00</span> TK</p>
+                        <p>Discount : <span id="discount-field" class="text-gray-500">00.00</span> TK</p>
+                        <p> Total : <span id="grand-total-field" class="text-gray-500">00.00</span> TK</p>
+                    </div>
+                    <hr class="bg-black">
+                    <!-- The button to open modal -->
+                    <button class="btn bg-primary-color w-full text-xl text-white hover:bg-pink-700" id="purchase-btn" disabled>
+                        <a href="#my_modal_8">Make Purchase</a>
+                    </button>
+                    <div class="modal" id="my_modal_8">
+                        <div class="modal-box flex flex-col items-center justify-center">
+                            <img src="./resource/images/congo.png" alt="Congratulations">
+                            <h3 class="font-bold text-lg">Congratulations</h3>
+                            <p class="py-4">Your Purchase the product</p>
+                            <div class="modal-action">
+                                <a href="index.html" class="text-xl font-medium py-4 px-11 bg-primary-color text-white rounded-lg">Go Home</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main Section Ends Here -->
+
+    <!-- Footer Section Starts Here -->
+
+    <footer></footer>
+
+    <!-- Footer Section Ends Here -->
+    <script src="./resource/script/script.js"></script>
+
+</body>
+
+</html>
